@@ -17,9 +17,13 @@ func (u User) getAllInfo() string {
 		"размере %d.", u.name, u.age, u.money)
 }
 
+func (u *User) setNewName(newName string) {
+	u.name = newName
+}
+
 func home_page(w http.ResponseWriter, r *http.Request) {
-	bob := User{"Bob", 25, -50, 4.4, 0.8}
-	fmt.Fprintf(w, bob.getAllInfo())
+	// bob := User{"Bob", 25, -50, 4.4, 0.8}
+	fmt.Fprintf(w, "<h1>Title</h1>")
 }
 
 func contacts_page(w http.ResponseWriter, r *http.Request) {
